@@ -1,0 +1,38 @@
+@font-face {
+    font-family: "Kyiv Sans";
+    src: url("../fonts/KyivTypeSans-VarGX.woff2") format("woff2-variations");
+    font-weight: 0 1000;
+    font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    min-height: 100dvh;
+    place-content: center;
+}
+
+h1 {
+    --_font-weight: 1;
+    --_font-contrast: 250;
+    --_font-midline: 0;
+
+    font-family: "Kyiv Sans";
+    font-variation-settings: "wght" var(--_font-weight),
+        "CONT" var(--_font-contrast), "MIDL" var(--_font-midline);
+    transition: font-variation-settings 500ms;
+}
+
+h1:hover {
+    --_font-weight: 1000;
+    --_font-contrast: 1000;
+    --_font-midline: -1000;
+}
